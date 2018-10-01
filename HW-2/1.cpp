@@ -6,8 +6,10 @@ int maxlen(int[], int);
 int main() {
 	int size = 0;
 	int* array;
-	cout << "Enter array size: ";
-	cin >> size;
+	do {
+		cout << "Enter array size (must be positive): ";
+		cin >> size;
+	} while ( size <= 0 );
 	array = new int[size];
 	for (int i = 0; i < size; i++) {
 		cout << "Enter element #" << i + 1 << ":";
@@ -19,7 +21,7 @@ int main() {
 }
 
 int maxlen(int array[], int size) {
-	if ( 0 == size ) {
+	if ( 1 == size ) {
 		return size;
 	} else {
 		int integer = array[0];
