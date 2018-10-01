@@ -123,6 +123,12 @@ int main() {
 	digits[9].setLine5("     @ ");
 	digits[9].setLine6(" @   @ ");
 	digits[9].setLine7("  @@@  ");
+	int input;
+	do {
+        cout << "Enter a positive integer: ";
+        cin >> input;
+	} while( input <= 0 );
+	BigInt(input);
 	return 0;
 }
 
@@ -135,7 +141,7 @@ void BigInt(int integer) {
     int input[count];
     integerTemp = integer;
     for (int i = 0; i < count; i++) {
-        input[i] = integerTemp % 10;
+        input[count - i - 1] = integerTemp % 10;
         integerTemp /= 10;
     }
     for (int i = 0; i < count; i++) {
