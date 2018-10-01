@@ -127,4 +127,43 @@ int main() {
 }
 
 void BigInt(int integer) {
+    int count = 0;
+    int integerTemp = integer;
+    for (; integerTemp != 0; integerTemp /= 10) {
+        count++;
+    }
+    int input[count];
+    integerTemp = integer;
+    for (int i = 0; i < count; i++) {
+        input[i] = integerTemp % 10;
+        integerTemp /= 10;
+    }
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine1();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine2();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine3();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine4();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine5();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine6();
+    }
+    cout << endl;
+    for (int i = 0; i < count; i++) {
+        cout << digits[input[i]].getLine7();
+    }
+    cout << endl;
 }
