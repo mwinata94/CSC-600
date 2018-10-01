@@ -25,21 +25,21 @@ int maxlen(int array[], int size) {         // Function definition
 		return size;                        // maxlen is 1 if size of array is 1
 	} else {                                // else iterate through the array to find maxlen
 		int integer = array[0];             // Store the first integer to be counted
-		int counter = 1;                    // counter is set to one since the first element is counted
+		int count = 1;                      // counter is set to one since the first element is counted
 		int maxlen = 0;                     // maxlen is set to the default value 0
 		for (int i = 1; i < size; i++) {    // Iterate through the array from the second element since the first element is already counted
 			if ( integer == array[i] ) {    // If the next element is in sequence
-				counter++;                  // Increment the counter
+				count++;                    // Increment the counter
 			} else {                        // else
-				if ( maxlen < counter ) {   // If counter is larger than maxlen
-					maxlen = counter;       // assign counter to maxlen
+				if ( maxlen < count ) {     // If counter is larger than maxlen
+					maxlen = count;         // assign counter to maxlen
 				}                           // End if
-				counter = 1;                // Assign counter to 1 since the first element of the new sequence is counted
+				count = 1;                  // Assign counter to 1 since the first element of the new sequence is counted
 				integer = array[i];         // Store the first integer of the new sequence to be counted
 			}                               // End if
 		}                                   // End of iteration
-		if ( maxlen < counter ) {           // If the last sequence count is larger than max len
-			return counter;                 // Return counter
+		if ( maxlen < count ) {             // If the last sequence count is larger than max len
+			return count;                   // Return counter
 		} else {                            // Else
 			return maxlen;                  // Return maxlen
 		}                                   // End if
