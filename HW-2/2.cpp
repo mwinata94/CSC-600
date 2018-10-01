@@ -37,20 +37,21 @@ private:
 	string line7;
 };
 
+DigitToText digits[10] = {
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText(),
+    DigitToText()
+};
+
 int main() {
-	DigitToText digits[10] = {
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText(),
-		DigitToText()
-	};
-	digits[0].setLine1("  @@@  ");
+    digits[0].setLine1("  @@@  ");
 	digits[0].setLine2(" @   @ ");
 	digits[0].setLine3(" @   @ ");
 	digits[0].setLine4(" @   @ ");
@@ -120,6 +121,5 @@ int main() {
 	digits[9].setLine5("     @ ");
 	digits[9].setLine6(" @   @ ");
 	digits[9].setLine7("  @@@  ");
-
 	return 0;
 }
