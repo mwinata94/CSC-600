@@ -1,2 +1,4 @@
 *.cbp
 *.save
+bin/
+obj/
