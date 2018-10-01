@@ -12,18 +12,7 @@ private:
 	string line[7];
 };
 
-DigitToText digits[10] = {
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText(),
-    DigitToText()
-};
+DigitToText digits[10];
 
 void BigInt(int);
 
