@@ -2,3 +2,4 @@
 *.save
 bin/
 obj/
+*.depend
