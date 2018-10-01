@@ -50,6 +50,8 @@ DigitToText digits[10] = {
     DigitToText()
 };
 
+void BigInt(int);
+
 int main() {
     digits[0].setLine1("  @@@  ");
 	digits[0].setLine2(" @   @ ");
@@ -122,4 +124,7 @@ int main() {
 	digits[9].setLine6(" @   @ ");
 	digits[9].setLine7("  @@@  ");
 	return 0;
+}
+
+void BigInt(int integer) {
 }
