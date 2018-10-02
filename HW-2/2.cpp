@@ -86,22 +86,22 @@ int main() {
 	return 0;
 }
 
-void BigInt(int integer) {
-    int count = 0;
-    int integerTemp = integer;
-    for (; integerTemp != 0; integerTemp /= 10) {
-        count++;
-    }
-    int input[count];
-    integerTemp = integer;
-    for (int i = 0; i < count; i++) {
-        input[count - i - 1] = integerTemp % 10;
-        integerTemp /= 10;
-    }
-    for (int i = 0; i < 7; i++) {
-        for (int j = 0; j < count; j++) {
-            cout << digits[input[j]][i];
-        }
-        cout << endl;
-    }
-}
+void BigInt(int integer) {                          // Start function
+    int count = 0;                                  // Initialize count variable with a default value
+    int integerTemp = integer;                      // Initialize temporary variable to store the integer value
+    for (; integerTemp != 0; integerTemp /= 10) {   // Loop until integerTemp / 10 is 0
+        count++;                                    // Increment the count to count the number of digits
+    }                                               // End for loop
+    int input[count];                               // Declare an int array of size count
+    integerTemp = integer;                          // Initialize the temporary variable with the integer value again
+    for (int i = 0; i < count; i++) {               // Loop until count
+        input[count - i - 1] = integerTemp % 10;    // Store the digit at its designated position
+        integerTemp /= 10;                          // Shift right the temporary value
+    }                                               // End for loop
+    for (int i = 0; i < 7; i++) {                   // Loop 7 times to print each line
+        for (int j = 0; j < count; j++) {           // Loop count times to print each digit
+            cout << digits[input[j]][i];            // Print a line of each digit
+        }                                           // End for loop
+        cout << endl;                               // Print end line
+    }                                               // End For loop
+}                                                   // End function
