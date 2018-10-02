@@ -34,12 +34,12 @@ int maxlen(int array[], int size) {           // Function definition
                     maxlen = count;           // assign counter to maxlen
                 }                             // End if
                 count = 1;                    // Assign counter to 1 since the first element of the new sequence is counted
-            }                                 // End if
+            }                                 // End else
         }                                     // End of iteration
         if ( maxlen < count ) {               // If the last sequence count is larger than max len
             return count;                     // Return counter
         } else {                              // Else
             return maxlen;                    // Return maxlen
-        }                                     // End if
+        }                                     // End else
     }                                         // End else
 }                                             // End function
