@@ -4,8 +4,6 @@ using namespace std;
 
 class DigitToText {
 public:
-	DigitToText() {
-	}
 	string getLine( int i ) { return line[i]; }
 	void setLine( string newLine, int i ) { line[i] = newLine; }
 private:
