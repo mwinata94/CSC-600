@@ -8,7 +8,6 @@ int main() {
 }
 
 int* reduce(int array[], int size) {
-    int newSize;
     int firstLargest = 0;
     int secondLargest = 0;
     int thirdLargest = 0;
@@ -43,5 +42,11 @@ int* reduce(int array[], int size) {
             thirdCount++;
         }
     }
-    return nullptr;
+    int returnArray[size - firstCount - secondCount - thirdCount];
+    for (int i(0), j(0); i < size; i++) {
+        if (array[i] < thirdLargest) {
+            returnArray[j++] = array[i];
+        }
+    }
+    return returnArray;
 }
